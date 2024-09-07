@@ -32,6 +32,7 @@ public class MainController {
 		
 		// classpath:/templates/common/main.html forward
 		return "common/main";
+		마이바티스
 	}
 	
 	
