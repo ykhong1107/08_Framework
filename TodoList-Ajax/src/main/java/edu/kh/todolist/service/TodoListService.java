@@ -1,26 +1,17 @@
-package edu.kh.todolist.mapper;
+package edu.kh.todolist.service;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
+import java.util.Map;
 
 import edu.kh.todolist.dto.Todo;
 
-@Mapper // 상속받은 클래스 생성 후 Bean 등록
-public interface TodoListMapper {
-	
-	/** 할일 목록조회
+public interface TodoListService {
+
+	/** 할일 목록 조회 + 완료된 할 일 개수
 	 * @return
 	 */
-	List<Todo> selectTodoList();
+	Map<String, Object> selectTodoList();
 
-	
-	/** 완료된 할 일 개수조회
-	 * @return
-	 */
-	int selectCompleteCount();
-
-	/** 할일 추가
+	/** 할일추가
 	 * @param todo
 	 * @return result
 	 */
@@ -32,12 +23,11 @@ public interface TodoListMapper {
 	 */
 	Todo todoDetail(int todoNo);
 
-	/** 할일 완료 여부
+	/** 완료 여부 변경
 	 * @param todoNo
 	 * @return
 	 */
 	int todoComplete(int todoNo);
-
 
 	/** 할일 수정
 	 * @param todo
@@ -47,9 +37,12 @@ public interface TodoListMapper {
 
 	/** 할 일 삭제
 	 * @param todoNo
+	 * @param ra
 	 * @return 
 	 */
 	int todoDelete(int todoNo);
+
+	String searchTitle(int todoNo);
 
 
 
