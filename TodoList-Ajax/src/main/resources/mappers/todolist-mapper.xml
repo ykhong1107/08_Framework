@@ -74,7 +74,7 @@
 			TODO_NO = #{todoNo}
 	</update>
 
-		<!-- 할 일 삭제 -->
+	<!-- 할 일 삭제 -->
 	<delete id="todoDelete" parameterType="_int">
 		DELETE FROM TB_TODO
 		WHERE TODO_NO = #{todoNo}
@@ -89,7 +89,11 @@
 		WHERE TODO_NO = #{todoNo}				
 	</select>
 
-
+	<!-- 전체 할 일 개수조회 -->
+	<select id="getTotalCount"
+			resultType="_int">
+		SELECT COUNT(*) FROM TB_TODO
+	</select>
 
 
 

@@ -54,6 +54,11 @@ public interface TodoListMapper {
 
 	String searchTitle(int todoNo);
 
+	/** 전체 할 일 개수 조회
+	 * @return
+	 */
+	int getTotalCount();
+
 
 
 }

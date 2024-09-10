@@ -74,6 +74,23 @@ public class TodoListServiceImpl implements TodoListService{
 		return mapper.searchTitle(todoNo);
 	}
 	
+	// 전체 할 일 개수 조회
+	@Override
+	public int getTotalCount() {
+		return mapper.getTotalCount();
+	}
+	
+	// 완료된 할 일 개수 조회
+	@Override
+	public int getCompleteCount() {
+		return mapper.selectCompleteCount();
+	}
+	
+	// 할일 전체목록 ○★☆★☆ selectTodoList 반환이유 -> List로 이미 위에한게 있기때문!!
+	@Override
+	public List<Todo> getTodoList() {
+		return mapper.selectTodoList();
+	}
 }
 
 
