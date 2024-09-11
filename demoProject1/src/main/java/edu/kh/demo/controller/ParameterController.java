@@ -166,9 +166,9 @@ public class ParameterController {
 			
 			) {
 			
-			log.debug("colorArr : {}", Arrays.toString(colorArr));
-			log.debug("fruitList : {}", fruitList);
-			log.debug("paramMap : {}", paramMap);
+			log.debug("colorArr 	: {}", Arrays.toString(colorArr));
+			log.debug("fruitList 	: {}", fruitList);
+			log.debug("paramMap 	: {}", paramMap);
 		
 		return "param/result3"; // forward
 	}

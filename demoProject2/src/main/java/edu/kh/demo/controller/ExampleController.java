@@ -30,8 +30,6 @@ public class ExampleController {
 	
 	// 4) application scope - 서버 실행시 1개만 생성, 서버가 종료될때까지 유지
 	
-	
-	
 	/* Model
 	 * - org.springframework.ui 패키지
 	 * 
