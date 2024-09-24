@@ -74,6 +74,39 @@ public class MemberServiceImpl implements MemberService{
 		return loginMember;
 	}
 	
+	// 회원가입
+	@Override
+	public int signUp(Member inputMember) {
+		
+		// 1) 비밀번호 암호화(BCrypt)
+		String encPw = encoder.encode(inputMember.getMemberPw());
+		inputMember.setMemberPw(encPw); // 암호와시킨 셋멤버를 인풋멤버에 세팅했다.
+		
+		// 2) 주소 미입력(",,")시 null로 변경
+		if(inputMember.getMemberAddress().equals(",,")) {
+				inputMember.setMemberAddress(null);
+		}
+		
+		// text 타입의 input은 값이 작성이 안되면 "" (빈칸)
+		// checkbox, radio가 체크가 안되면 null
+
+		// 3) mapper 호출 후 결과반환
+		return mapper.signUp(inputMember);
+	}
+	
+	// 이메일 중복검사
+	@Override
+	public int emailCheck(String email) {
+		
+		return mapper.emailCheck(email);
+	}
+	
+	// 닉네임 중복검사
+	@Override
+	public int nicknameCheck(String nickname) {
+		return mapper.nicknameCheck(nickname);
+	}
+	
 	
 	
 	
