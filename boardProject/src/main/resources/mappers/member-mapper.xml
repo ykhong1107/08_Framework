@@ -67,6 +67,8 @@
  	WHERE MEMBER_NICKNAME = #{nickname}
  	AND   MEMBER_DEL_FL = 'N'
  </select>
+ 
+ 
   
   
   
