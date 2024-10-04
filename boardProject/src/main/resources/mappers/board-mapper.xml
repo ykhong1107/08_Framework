@@ -6,7 +6,7 @@
  -->
 <mapper namespace="edu.kh.project.board.mapper.BoardMapper">
 
-	<!-- boardCode가 일치하는 게시글 중 삭제되지 않은 게시글 수 조회 -->
+<!-- boardCode가 일치하는 게시글 중 삭제되지 않은 게시글 수 조회 -->
 	<select id="getListCount" resultType="_int">
 		SELECT COUNT(*)
 		FROM "BOARD"
@@ -67,6 +67,5 @@
 	  
 	</select>
 	
-
   
 </mapper>

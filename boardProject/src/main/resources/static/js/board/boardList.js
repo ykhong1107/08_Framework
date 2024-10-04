@@ -49,12 +49,21 @@ pageNoList?.forEach( (item, index) => {
       default : // 클릭한 숫자 페이지로 이동
         location.href = pathname + "?cp=" + item.innerText;
     }
-
-
   });
-
-
-
-
-
 })
+
+//-----------------------------------------------------------------------------
+
+/* 글쓰기 버튼 클릭 시 */
+const insertBtn = document.querySelector("#insertBtn");
+
+insertBtn?.addEventListener("click", () =>{
+
+  // 현재주소 : /board/{boardCode}
+  // 요청주소 : /editBoard/{boardCode}/insert
+  const boardCode = location.pathname.split("/")[2];
+
+  location.href = `/editBoard/${boardCode}/insert`;
+
+
+});
