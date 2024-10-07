@@ -1,5 +1,7 @@
 package edu.kh.project.board.dto;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -42,6 +44,30 @@ public class Board {
 	
 	// -----------------------------------------------
 	// (추가작성 예정)
+	
+	private String thumbnail; // 썸네일 이미지
+	private String profileImg; // 작성자 프로필 이미지
+	
+	// 특정 게시글의 이미지목록을 저장할 필드
+	private List<BoardImg> imageList;
+	
+	// 특정 게시글의 댓글목록을 저장할 필드
+	private List<Comment> commentList;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
