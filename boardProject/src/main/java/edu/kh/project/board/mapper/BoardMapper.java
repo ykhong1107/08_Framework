@@ -67,6 +67,11 @@ public interface BoardMapper {
 	 */
 	int getLikeCount(int boardNo);
 
+	/** DB에서 모든 게시판 종류를 조회
+	 * @return
+	 */
+	List<Map<String, String>> selectBoardTypeList();
+
 	
 	
 	

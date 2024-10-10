@@ -244,6 +244,16 @@
   </select>
   
   
+    
+  <!-- DB에서 모든 게시판 종류를 조회 -->
+  <select id="selectBoardTypeList" resultType="map">
+  	SELECT 
+  		BOARD_CODE "boardCode",
+  		BOARD_NAME "boardName"
+  	FROM
+  		"BOARD_TYPE"
+  	ORDER BY BOARD_CODE ASC
+  </select>
   
   
     

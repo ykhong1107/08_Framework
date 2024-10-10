@@ -1,5 +1,6 @@
 package edu.kh.project.board.service;
 
+import java.util.List;
 import java.util.Map;
 
 import edu.kh.project.board.dto.Board;
@@ -31,6 +32,12 @@ public interface BoardService {
 	 * @return map
 	 */
 	Map<String, Object> boardLike(int boardNo, int memberNo);
+
+	/**
+	 * DB에서 모든 게시판 정보 조회
+	 * @return
+	 */
+	List<Map<String, String>> selectBoardTypeList();
 
 	
 	
