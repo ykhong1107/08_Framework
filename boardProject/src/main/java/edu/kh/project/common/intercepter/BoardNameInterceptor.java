@@ -10,7 +10,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class BoardNameIntercepter implements HandlerInterceptor{
+public class BoardNameInterceptor implements HandlerInterceptor{
 
 	// 후처리
 	@Override

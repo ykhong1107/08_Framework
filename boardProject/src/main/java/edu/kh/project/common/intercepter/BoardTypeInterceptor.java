@@ -39,7 +39,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
-public class BoardTypeIntercepter implements HandlerInterceptor {
+public class BoardTypeInterceptor implements HandlerInterceptor {
 
 	@Autowired // 의존성 주입(DI)
 	private BoardService service;

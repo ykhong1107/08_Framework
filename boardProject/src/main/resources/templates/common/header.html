@@ -36,17 +36,18 @@
   </section>
 
 
+ 
   <section>
     <!-- 우측 상단 로그인 / 드롭다운 메뉴 -->
-     <div class="header-top-menu">
-      
+    <div class="header-top-menu">
+
       <!-- 로그인 X -->
-      <th:block th:unless= "${session.loginMember}">
+      <th:block th:unless="${session.loginMember}">
         <a href="/">메인 페이지</a>
         |
         <a href="/member/login">로그인</a>
       </th:block>
-      
+
       <!-- 로그인 O -->
       <th:block th:if="${session.loginMember}">
 
@@ -65,24 +66,23 @@
 
       </th:block>
 
-     </div>
-
+    </div>
   </section>
 
+
 </header>
+
 
 <!-- navigator -->
 <nav>
   <ul>
-    <li>
-      <a href="/board/1">공지사항</a>
+    <li th:each="boardType : ${application.boardTypeList}">
+      <a th:href="@{/board/{boardCode} (boardCode = ${boardType.boardCode})}"
+      th:text="${boardType.boardName}"
+      th:classappend="${boardType.boardName} == ${boardName} ? current-board : ''"
+      >게시판 이름</a>
     </li>
-    <li>
-      <a href="/board/2">자유 게시판</a>
-    </li>
-    <li>
-      <a href="/board/3">정보 게시판</a>
-    </li>
+
     <li>
       <a href="/fileUpload/main">파일 업로드 연습</a>
     </li>
