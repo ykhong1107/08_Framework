@@ -12,10 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class BoardNameInterceptor implements HandlerInterceptor{
 
+	
+	
+	
+	
 	// 후처리
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		
 		
 		/* 게시판 관련된 요청/응답을 가로채서 
 		 * 현재 어떤 게시판을 조회/삽입/수정 하려는지 알 수 있게

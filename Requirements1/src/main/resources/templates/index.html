@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>카테고리목록</title>
+		<link rel="stylesheet" href="/css/jmtjmc.css">
+	</head>
+	<body>
+		
+
+		<header>
+      <a href="#">메인 페이지</a>
+      <a href="#">점메추</a>
+      <a href="#">공지사항</a>
+      <a href="#">FAQ</a>
+  </header>
+
+  <div class="container">
+		<h1>이 가게를 추천하시겠어요?</h1>
+		<div class="like-button">
+				<button>💗좋아요 버튼</button>
+		</div>
+		<hr class="hr">
+	
+      <textarea class="review-box" placeholder="리뷰 본문 내용"></textarea>
+      
+
+		</div>
+		<button class="register-btn">등록</button>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+  <button class="scroll-up" onclick="scrollToTop()">↑</button>
+
+	<script>
+		function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 부드러운 스크롤
+            });
+					}
+	</script>
+
+	</body>
+
+</html>
+
+ 		<!-- <table>
+			<thead>
+				<tr>
+					<th>카테고리 번호</th>
+					<th>카테고리 이름</th>					
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="category : ${application.categoryList}">
+					<td>[[${category.categoryNo}]</td>
+					<td>[[${category.categoryName}]</td>
+				</tr>
+			</tbody>
+		</table>	 --> 
