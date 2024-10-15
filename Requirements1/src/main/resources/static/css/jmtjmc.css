@@ -1,97 +1,158 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+/* 기본 스타일 초기화 */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #61C0BF;
-  padding: 10px;
-  height: 80px;
-  text-align: left;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
-header a {
-  margin-right: 15px;
-  color: black;
+/* 상단바 스타일 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6EC3C2;
+  padding: 10px 20px;
+}
+
+.header-left h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.header-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-right a {
+  color: white;
   text-decoration: none;
-  font-size: 15px;
+  font-weight: bold;
 }
 
-.container {
-  background-color: white;
-  width: 50%;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* 검색바 스타일 */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
 }
 
-h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.search-container input {
+  width: 200px;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
 }
 
-.hr{
+/* 게시글 스타일 */
+.post-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.post {
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  position: relative;
+  width: 60%;
+  height: 300px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.post-title {
+  font-weight: bold;
+}
+
+.post-time {
+  margin-left: auto;
   color: gray;
-  height: 10;
+  font-size: 12px;
 }
 
-.review-box {
-  width: 90%;
-  height: 150px;
+.post-content {
   margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  resize: none;
-  font-size: 14px;
+  color: #333;
 }
 
-.like-button {
+.post-footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 10px;
 }
 
-.like-button button {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
+/* 댓글 보기 토글 버튼 */
+.comment-toggle {
   display: flex;
   align-items: center;
-}
-
-
-
-.register-btn {
-  background-color: #61C0BF;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
   cursor: pointer;
-  display: block;
-  margin-top: 20px;
-  margin-left: 67%;
-  width: 10%;
-  font-size: 16px;
+  color: #3b3d3d;
+  font-weight: bold;
 }
 
-.scroll-up {
-  position: fixed;
-  bottom: 20px;
+/* 삼각형 아이콘 */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #6EC3C2;
+  margin-right: 5px;
+}
+
+/* 글쓰기 버튼 스타일 */
+.writeBtn {
   right: 20px;
-  background-color: #61C0BF;
-  color: white;
+  background-color: #6EC3C2;
+  width: 8%;
+  margin-left: 50%;
   border: none;
-  border-radius: 50%;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
   cursor: pointer;
+}
+
+/* 상단 버튼*/
+#topBtn{
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  border-radius: 50%;
+  border: none;
+  padding: 40;
+  color: #6EC3C2;
+  width: 60px;
+  height: 60px;
+  font-size:40px
+  
 }

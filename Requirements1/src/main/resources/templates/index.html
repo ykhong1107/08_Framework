@@ -3,90 +3,81 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>카테고리목록</title>
+		<title>BoardMain</title>
 		<link rel="stylesheet" href="/css/jmtjmc.css">
 	</head>
+
 	<body>
+				<!-- 상단바 -->
+				<header>
+						<div class="header-left">
+								<h1>홈페이지 로고</h1>
+						</div>
+						<nav class="header-right">
+								<ul>
+										<li><a href="#">메인페이지</a></li>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">FAQ</a></li>
+								</ul>
+						</nav>
+				</header>
+		
+				<br><br>
+				<!-- 검색바 -->
+				<div class="search-container">
+						<input type="text" placeholder="　검색">
+				</div>
+		
+				<!-- 게시글 리스트 -->
+				<div class="post-container">
+						<div class="post">
+								<div class="post-header">
+										<div class="profile-pic"></div>
+										<div class="post-title">제목</div>
+										<div class="post-time">이름 | 21분 전</div>
+								</div>
+								<br>
+								<hr>
+								<div class="post-content">본문 내용</div>
+								<br><br><br><br><br><br>
+								<div class="post-footer">
+										<span class="comment-toggle">
+												<div class="triangle"></div> 댓글 보기
+										</span>
+								</div>
+						</div>
+		
+						<div class="post">
+								<div class="post-header">
+										<div class="profile-pic"></div>
+										<div class="post-title">제목</div>
+										<div class="post-time">이름 | 21분 전</div>
+								</div>
+								<br>
+								<hr>
+								<div class="post-content">본문 내용</div>
+								<br><br><br><br><br><br>
+								<div class="post-footer">
+										<span class="comment-toggle">
+												<div class="triangle"></div> 댓글 보기
+										</span>
+								</div>
+							</div>
+							
+							<!-- 글쓰기 버튼 -->
+					
+							<button id="cc" class="writeBtn">글쓰기</button>
+
+						</div>
+						
+				<!-- 상단으로 이동 버튼 -->
+				<button class="fa-solid fa-arrow-up" id="topBtn"></button>
 		
 
-		<header>
-      <a href="#">메인 페이지</a>
-      <a href="#">점메추</a>
-      <a href="#">공지사항</a>
-      <a href="#">FAQ</a>
-  </header>
-
-  <div class="container">
-		<h1>이 가게를 추천하시겠어요?</h1>
-		<div class="like-button">
-				<button>💗좋아요 버튼</button>
-		</div>
-		<hr class="hr">
-	
-      <textarea class="review-box" placeholder="리뷰 본문 내용"></textarea>
-      
-
-		</div>
-		<button class="register-btn">등록</button>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-  <button class="scroll-up" onclick="scrollToTop()">↑</button>
-
-	<script>
-		function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // 부드러운 스크롤
-            });
-					}
-	</script>
+	<script src="/js/index.js"></script>
+	<script src="https://kit.fontawesome.com/ac3b627b7e.js" crossorigin="anonymous"></script>
 
 	</body>
 
 </html>
-
- 		<!-- <table>
-			<thead>
-				<tr>
-					<th>카테고리 번호</th>
-					<th>카테고리 이름</th>					
-				</tr>
-			</thead>
-			
-			<tbody>
-				<tr th:each="category : ${application.categoryList}">
-					<td>[[${category.categoryNo}]</td>
-					<td>[[${category.categoryName}]</td>
-				</tr>
-			</tbody>
-		</table>	 --> 
+ 		
