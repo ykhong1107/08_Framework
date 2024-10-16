@@ -5,40 +5,15 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-}
+} */
 
-/* 상단바 스타일 */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #6EC3C2;
-  padding: 10px 20px;
-}
-
-.header-left h1 {
-  color: white;
-  font-size: 24px;
-}
-
-.header-right ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.header-right a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 /* 검색바 스타일 */
 .search-container {
