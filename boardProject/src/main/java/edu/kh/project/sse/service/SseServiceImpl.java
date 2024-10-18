@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import edu.kh.project.member.dto.Member;
 import edu.kh.project.sse.dto.Notification;
 import edu.kh.project.sse.mapper.SseMapper;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +45,22 @@ public class SseServiceImpl implements SseService{
 	public List<Notification> selectNotificationList(int memberNo) {
 		return mapper.selectNotificationList(memberNo);
 	}
+
+	// 현재 로그인한 회원이 받은 알림 중 읽지않은 알림개수 조회
+	@Override
+	public int notReadCheck(int memberNo) {
+		return mapper.notReadCheck(memberNo);
+	}
 	
-	
-	
+	// 알림 삭제
+	@Override
+	public void deleteNotification(int notificationNo) {
+		mapper.deleteNotification(notificationNo);
+	}
+
+	// 알림 읽음 여부 변경(N->Y)
+	@Override
+	public void updateNotification(int notificationNo) {
+		mapper.updateNotification(notificationNo);
+	}
 }

@@ -20,8 +20,6 @@ public class BoardController {
 	public String boardMain() {
 		
 		
-		
-		
 		return "/board/boardMain";
 	}
 	

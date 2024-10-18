@@ -8,3 +8,9 @@ topBtn.onclick = function(){
   });
 };
 
+// 커서 위치 고정
+window.onload = () =>{
+
+  document.getElementById("write-content").focus();
+
+};
