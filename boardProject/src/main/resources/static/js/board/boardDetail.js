@@ -60,8 +60,6 @@ boardLike.addEventListener("click", e => {
 
 // -------------------------------------------------
 
-
-
 // -------------------------------------------------
 
 /* * 삭제 버튼 클릭 시 *
@@ -92,6 +90,8 @@ deleteBtn?.addEventListener("click", () => {
   const form = document.createElement("form");
   form.action = url;
   form.method = "POST";
+  // POST 는 누구나 할 수 없을 때
+  // form태그와 ajax 2가지 방식밖에 없음
 
   // input 태그 생성
   const input = document.createElement("input");

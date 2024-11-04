@@ -31,8 +31,6 @@ const selectCommentList = () => {
     addEventDeleteComment(); // 삭제 버튼에 이벤트 추가
     addEventUpdateComment(); // 수정 버튼에 이벤트 추가
 
-
-
   })
   .catch(err => console.error(err));
 
