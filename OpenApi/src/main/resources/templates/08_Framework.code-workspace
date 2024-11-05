@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../JMTProject"
+		}
+	],
+	"settings": {
+		"powermode.enabled": true,
+		"powermode.presets": "particles",
+		"powermode.combo.timerEnabled": "show",
+		"powermode.combo.counterEnabled": "show",
+		"powermode.combo.location": "statusbar",
+		"powermode.combo.threshold": 3,
+		"liveServer.settings.multiRootWorkspaceName": "JMTProject"
+	}
+}
