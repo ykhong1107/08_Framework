@@ -2,6 +2,7 @@ package edu.kh.test.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +31,48 @@ public class StudentController {
 
 		return "student/select";
 	}
+	
+	@GetMapping("signUp")
+	public String project() {
+		
+		
+		
+		return "student/signUp";
+	}
+	
+	@GetMapping("signUpAccount")
+	public String signUpAccount() {
+		
+		
+		
+		return "student/signUpAccount";
+	}
+	
+	@GetMapping("signUpAccountConfirm")
+	public String signUpAccountConfirm() {
+	
+		return "student/signUpAccountConfirm";
+	}
+	
+	@GetMapping("signUpCreate")
+	public String signUpCreate() {
+		
+		return "student/signUpCreate";
+	}
+	
+	@GetMapping("myPageLogin")
+	public String myPageLogin() {
+		
+		return "student/myPageLogin";
+	}
+	
+	@GetMapping("myPageMain")
+	public String myPageMain() {
+		
+		return "student/myPageMain";
+	}
+	
+	
+	
 	
 }

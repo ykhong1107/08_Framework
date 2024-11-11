@@ -185,6 +185,91 @@ public class MainController {
 		}
 	}
 	
+	// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	
+	@GetMapping("air")
+	
+	public String airPollution(@RequestParam("cityName") String cityName) throws IOException, URISyntaxException{
+
+	// API 개인 인증키
+
+	String serviceKey = "k5bbBry%2FPjYFdnEsLz1j5fXe3M5kqWYSgPvlDR7fik6lYZBObrSw6tT70AOMB%2F1Dg%2FuSkWrSlOhsNSkBChF6EQ%3D%3D";
+
+	 
+
+	String requestUrl = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty";
+
+	 
+
+	StringBuilder urlBuilder = new StringBuilder(requestUrl);
+	
+	urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8") + "=" + encodingServiceKey);
+
+	urlBuilder.append("&" + URLEncoder.encode("sidoName","UTF-8") + "=" + URLEncoder.encode(cityName, "UTF-8"));
+
+	urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8"));
+
+	 
+
+	// 공공데이터 요청 및 응답
+
+	URI uri = new URI(urlBuilder.toString());
+
+	URL url = uri.toURL();
+
+	 
+
+	 
+
+	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+	conn.setRequestMethod("GET");
+
+	conn.setRequestProperty("Content-type", "application/json");
+
+	 
+
+	BufferedReader rd;
+
+	if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
+
+	rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+	} else {
+
+	rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+
+	}
+
+	 
+
+	StringBuilder sb = new StringBuilder();
+
+	String line;
+
+	while ((line = rd.readLine()) != null) {
+
+	sb.append(line);
+
+	}
+
+	 
+
+	rd.close();
+
+	conn.disconnect();
+
+	 
+
+	// 응답 받은 데이터(JSON)를 로그에 출력
+
+	log.debug(sb.toString());
+
+	 
+
+	return "air";
+
+	}
 	
 	
 }
