@@ -68,11 +68,37 @@ public class StudentController {
 	
 	@GetMapping("myPageMain")
 	public String myPageMain() {
+			
+		
+		
 		
 		return "student/myPageMain";
 	}
 	
 	
+	@GetMapping("myPageUpdate")
+	public String myPageUpdate() {
+		
+		return "student/myPageupdate";
+	}
+	
+	@GetMapping("myPageOrderHistory")
+	public String myPageOrderHistory() {
+		
+		return "student/myPageOrderHistory";
+	}
+	
+	@GetMapping("myPageSalesHistory")
+	public String myPageSalesHistory() {
+		
+		return "student/myPageSalesHistory";
+	}
+	
+	@GetMapping("myPagePointHistory")
+	public String myPagePointHistory() {
+		
+		return "student/myPagePointHistory";
+	}
 	
 	
 }
